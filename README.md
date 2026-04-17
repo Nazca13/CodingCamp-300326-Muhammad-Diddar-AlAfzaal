@@ -1,137 +1,514 @@
 # Expense & Budget Visualizer
 
-Aplikasi web untuk melacak pengeluaran harian dengan visualisasi yang bersih dan profesional. Dibangun dengan HTML5, CSS3, dan Vanilla JavaScript.
+Aplikasi web untuk melacak pengeluaran harian dengan visualisasi yang bersih dan profesional. Dibangun dengan HTML5, CSS3, dan Vanilla JavaScript tanpa framework.
 
-## 🎯 Fitur Utama (MVP)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
-- ✅ **Total Balance** - Menampilkan total pengeluaran yang update otomatis
-- ✅ **Input Form** - Form dengan validasi untuk Nama Barang, Jumlah, dan Kategori (Food, Transport, Fun)
-- ✅ **Transaction List** - Daftar scrollable dengan tombol Delete untuk setiap item
-- ✅ **Visual Chart** - Pie chart menggunakan Chart.js yang menampilkan distribusi per kategori
-- ✅ **Local Storage** - Data tersimpan dan tidak hilang saat refresh browser
+---
 
-## 🚀 Fitur Tambahan
+## 📋 Daftar Isi
 
-1. **Sort Transactions** - Mengurutkan transaksi berdasarkan:
-   - Tanggal (Terbaru/Terlama)
-   - Jumlah (Tertinggi/Terendah)
+- [Fitur](#-fitur)
+- [Demo](#-demo)
+- [Teknologi](#️-teknologi)
+- [Instalasi](#-instalasi)
+- [Struktur Proyek](#-struktur-proyek)
+- [Fitur Detail](#-fitur-detail)
+- [Desain & UI](#-desain--ui)
+- [Browser Support](#-browser-support)
+- [Deployment](#-deployment)
+- [Screenshots](#-screenshots)
+- [License](#-license)
 
-2. **Highlight Spending** - Sistem peringatan pengeluaran:
-   - Highlight transaksi di atas Rp 100,000
-   - Alert jika total pengeluaran melebihi Rp 1,000,000
+---
 
-3. **Dark/Light Mode Toggle** - Tema yang dapat disesuaikan dengan preferensi pengguna
+## ✨ Fitur
 
-## 🎨 Desain
+### Fitur Utama (MVP)
 
-- Color palette hitam-putih yang profesional
-- Minimalis dan bersih
-- Hirarki visual yang jelas
-- Fully responsive (Mobile, Tablet, Desktop)
-- Smooth animations dan transitions
-- SVG icons untuk tampilan yang tajam
+✅ **Total Balance Display**
+- Menampilkan total pengeluaran secara real-time
+- Update otomatis setiap ada perubahan transaksi
+- Format mata uang Rupiah (Rp)
+
+✅ **Input Form dengan Validasi**
+- Field: Nama Barang, Jumlah, Kategori
+- Validasi field tidak boleh kosong
+- Validasi jumlah harus lebih dari 0
+- 3 Kategori: Food, Transport, Fun
+
+✅ **Transaction List**
+- Daftar scrollable dengan custom scrollbar
+- Menampilkan nama, jumlah, kategori, dan tanggal
+- Tombol delete untuk setiap transaksi
+- Konfirmasi sebelum menghapus
+- Smooth animations saat menambah/menghapus
+
+✅ **Visual Pie Chart**
+- Menggunakan Chart.js library
+- Menampilkan distribusi pengeluaran per kategori
+- Update otomatis saat data berubah
+- Warna soft yang tidak mencolok
+- Responsive di semua device
+- Tooltip dengan informasi detail
+
+✅ **Local Storage**
+- Data tersimpan di browser
+- Tidak hilang saat refresh
+- Auto-save setiap perubahan
+
+### Fitur Tambahan (3 Challenges)
+
+🎯 **1. Sort Transactions**
+- Urutkan berdasarkan tanggal (Terbaru/Terlama)
+- Urutkan berdasarkan jumlah (Tertinggi/Terendah)
+- Dropdown select yang mudah digunakan
+
+🎯 **2. Highlight Spending**
+- Highlight otomatis transaksi > Rp 100,000
+- Alert banner jika total > Rp 1,000,000
+- Visual feedback dengan border dan background
+
+🎯 **3. Dark/Light Mode Toggle**
+- Toggle button dengan SVG icons
+- Smooth transition antar tema
+- Preferensi tersimpan di Local Storage
+- Warna chart menyesuaikan tema
+
+---
+
+## 🎨 Demo
+
+### Live Demo
+🔗 [View Live Demo](https://your-username.github.io/CodingCamp-30Mar26-yourname/)
+
+### Quick Start
+```bash
+# Clone repository
+git clone https://github.com/your-username/CodingCamp-30Mar26-yourname.git
+
+# Buka folder
+cd CodingCamp-30Mar26-yourname
+
+# Buka index.html di browser
+open index.html  # macOS
+start index.html # Windows
+```
+
+---
+
+## 🛠️ Teknologi
+
+| Teknologi | Deskripsi |
+|-----------|-----------|
+| **HTML5** | Semantic markup untuk struktur |
+| **CSS3** | Modern styling dengan CSS Variables |
+| **Vanilla JavaScript** | Logic tanpa framework/library |
+| **Chart.js v4.4.0** | Library untuk pie chart visualization |
+| **Local Storage API** | Client-side data persistence |
+| **SVG Icons** | Scalable vector icons (Feather Icons) |
+
+### Kenapa Vanilla JavaScript?
+
+- ✅ No build process required
+- ✅ Faster load time
+- ✅ Easier to understand
+- ✅ No dependencies (except Chart.js)
+- ✅ Better for learning fundamentals
+
+---
+
+## 📦 Instalasi
+
+### Prerequisites
+- Browser modern (Chrome, Firefox, Edge, Safari)
+- Text editor (VS Code, Sublime, dll) - opsional
+- Git - untuk clone repository
+
+### Langkah Instalasi
+
+1. **Clone atau Download Repository**
+   ```bash
+   git clone https://github.com/your-username/repository-name.git
+   ```
+
+2. **Buka Folder Proyek**
+   ```bash
+   cd repository-name
+   ```
+
+3. **Buka di Browser**
+   - Double click `index.html`, atau
+   - Drag `index.html` ke browser, atau
+   - Gunakan Live Server di VS Code
+
+**Tidak perlu instalasi npm, build, atau server!**
+
+---
 
 ## 📁 Struktur Proyek
 
 ```
-├── index.html
+expense-budget-visualizer/
+│
+├── index.html              # Main HTML file
+├── README.md              # Dokumentasi proyek
+├── DEPLOYMENT.md          # Panduan deployment
+├── .gitignore            # Git ignore file
+│
 ├── css/
-│   └── style.css
+│   └── style.css         # Single CSS file (all styles)
+│
 ├── js/
-│   └── script.js
-├── assets/
-│   └── icons/
-│       ├── README.md
-│       ├── moon-light.svg
-│       ├── sun-dark.svg
-│       ├── wallet-light.svg
-│       ├── wallet-dark.svg
-│       ├── food-light.svg
-│       ├── food-dark.svg
-│       ├── transport-light.svg
-│       ├── transport-dark.svg
-│       ├── fun-light.svg
-│       ├── fun-dark.svg
-│       ├── trash-light.svg
-│       ├── trash-dark.svg
-│       ├── alert-light.svg
-│       └── alert-dark.svg
-└── README.md
+│   └── script.js         # Single JavaScript file (all logic)
+│
+└── assets/
+    └── icons/
+        ├── README.md           # Icon documentation
+        ├── moon-light.svg      # Dark mode toggle (light)
+        ├── sun-dark.svg        # Light mode toggle (dark)
+        ├── wallet-light.svg    # Balance icon (light)
+        ├── wallet-dark.svg     # Balance icon (dark)
+        ├── food-light.svg      # Food category (light)
+        ├── food-dark.svg       # Food category (dark)
+        ├── transport-light.svg # Transport category (light)
+        ├── transport-dark.svg  # Transport category (dark)
+        ├── fun-light.svg       # Fun category (light)
+        ├── fun-dark.svg        # Fun category (dark)
+        ├── trash-light.svg     # Delete button (light)
+        ├── trash-dark.svg      # Delete button (dark)
+        ├── alert-light.svg     # Alert icon (light)
+        └── alert-dark.svg      # Alert icon (dark)
 ```
 
-## 🛠️ Teknologi
+---
 
-- **HTML5** - Struktur aplikasi
-- **CSS3** - Styling dengan CSS Variables untuk theming
-- **Vanilla JavaScript** - Logic aplikasi tanpa framework
-- **Chart.js** - Library untuk visualisasi pie chart
-- **Local Storage API** - Penyimpanan data client-side
+## 🎯 Fitur Detail
 
-## 🚀 Cara Menjalankan
+### 1. Input Form & Validation
 
-1. Clone repository ini
-2. Buka file `index.html` di browser modern (Chrome, Firefox, Edge, Safari)
-3. Aplikasi siap digunakan!
+```javascript
+// Validasi yang diimplementasikan:
+- Nama barang tidak boleh kosong
+- Jumlah harus angka dan > 0
+- Kategori harus dipilih
+- Alert jika validasi gagal
+```
 
-Tidak perlu instalasi atau setup server.
+### 2. Transaction Management
+
+- **Add**: Form submission dengan validasi
+- **Display**: Render dengan format yang rapi
+- **Delete**: Konfirmasi sebelum hapus
+- **Sort**: 4 opsi sorting
+- **Persist**: Auto-save ke Local Storage
+
+### 3. Chart Visualization
+
+**Warna Chart (Soft Colors):**
+
+| Mode | Food | Transport | Fun |
+|------|------|-----------|-----|
+| Light | `#94a3b8` | `#a8a29e` | `#9ca3af` |
+| Dark | `#64748b` | `#78716c` | `#6b7280` |
+
+**Chart Features:**
+- Responsive sizing
+- Hover effects
+- Percentage display
+- Legend dengan color indicators
+- Smooth animations
+
+### 4. Theme System
+
+```javascript
+// Light Mode
+Background: #ffffff, #f5f5f5
+Text: #1a1a1a, #4a4a4a
+Border: #e5e5e5
+
+// Dark Mode  
+Background: #1a1a1a, #2d2d2d
+Text: #f5f5f5, #d0d0d0
+Border: #3a3a3a
+```
+
+---
+
+## 🎨 Desain & UI
+
+### Design Principles
+
+1. **Minimalism** - Clean, tidak berlebihan
+2. **Hierarchy** - Visual hierarchy yang jelas
+3. **Consistency** - Konsisten di semua elemen
+4. **Accessibility** - Mudah digunakan semua orang
+5. **Responsiveness** - Bekerja di semua device
+
+### Typography
+
+- **Font Family**: System fonts (-apple-system, Segoe UI, Roboto)
+- **Font Weights**: 400 (regular), 500 (medium), 600 (semibold), 700 (bold)
+- **Font Smoothing**: Antialiased untuk rendering yang smooth
+
+### Spacing System
+
+- **Small**: 8px, 12px, 16px
+- **Medium**: 20px, 24px, 32px
+- **Large**: 40px, 48px, 60px
+
+### Border Radius
+
+- **Small**: 6px (buttons, inputs)
+- **Medium**: 10px (cards)
+- **Large**: 14px (sections)
+
+---
 
 ## 📱 Responsive Design
 
-Aplikasi ini fully responsive dan bekerja dengan baik di:
-- 📱 Mobile (320px - 480px)
-- 📱 Tablet (481px - 768px)
-- 💻 Desktop (769px+)
+### Breakpoints
 
-## 🎨 Color Palette
+| Device | Width | Chart Size | Padding |
+|--------|-------|------------|---------|
+| **Desktop** | 769px+ | 320px | 24px |
+| **Tablet** | 481-768px | 260px (max 320px) | 16px |
+| **Mobile** | 320-480px | 240px (max 280px) | 16px |
+
+### Mobile Optimizations
+
+- ✅ Touch-friendly buttons (min 44px)
+- ✅ Readable font sizes (min 14px)
+- ✅ Stacked layouts untuk form
+- ✅ Smaller chart untuk mobile
+- ✅ Optimized spacing
+- ✅ Custom scrollbar
+
+---
+
+## 🌐 Browser Support
+
+| Browser | Version | Status |
+|---------|---------|--------|
+| Chrome | Latest | ✅ Fully Supported |
+| Firefox | Latest | ✅ Fully Supported |
+| Safari | Latest | ✅ Fully Supported |
+| Edge | Latest | ✅ Fully Supported |
+| Opera | Latest | ✅ Fully Supported |
+
+### Required Browser Features
+
+- ✅ ES6+ JavaScript
+- ✅ CSS Variables
+- ✅ Flexbox
+- ✅ Local Storage API
+- ✅ Canvas API (untuk Chart.js)
+
+---
+
+## 🚀 Deployment
+
+### GitHub Pages (Recommended)
+
+1. **Push ke GitHub**
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   git push origin main
+   ```
+
+2. **Enable GitHub Pages**
+   - Settings → Pages
+   - Source: main branch
+   - Folder: / (root)
+   - Save
+
+3. **Access Website**
+   ```
+   https://username.github.io/repository-name/
+   ```
+
+📖 **Panduan lengkap**: Lihat [DEPLOYMENT.md](DEPLOYMENT.md)
+
+### Alternative Hosting
+
+- **Netlify**: Drag & drop folder
+- **Vercel**: Import dari GitHub
+- **Surge**: `surge` command
+- **Firebase Hosting**: `firebase deploy`
+
+---
+
+## 📸 Screenshots
 
 ### Light Mode
-- Background: `#ffffff`, `#f5f5f5`
-- Text: `#1a1a1a`, `#4a4a4a`, `#6b6b6b`
-- Border: `#e5e5e5`
-- Accent: `#1a1a1a`
+```
+[Desktop View]
+- Clean white background
+- Black text and icons
+- Soft colored pie chart
+- Professional look
+```
 
 ### Dark Mode
-- Background: `#1a1a1a`, `#0f0f0f`, `#2d2d2d`
-- Text: `#f5f5f5`, `#d0d0d0`, `#a0a0a0`
-- Border: `#3a3a3a`
-- Accent: `#f5f5f5`
+```
+[Desktop View]
+- Dark background (#1a1a1a)
+- White text and icons
+- Darker colored pie chart
+- Easy on the eyes
+```
 
-## 📝 Constraints
+### Mobile View
+```
+[Mobile View]
+- Responsive layout
+- Smaller chart (240-280px)
+- Touch-friendly buttons
+- Optimized spacing
+```
 
-### Technical Constraints
-- ✅ HTML untuk struktur
-- ✅ CSS untuk styling (no Tailwind)
-- ✅ Vanilla JavaScript (no React, Vue, dll)
-- ✅ No backend server required
-- ✅ Browser Local Storage API
-- ✅ Client-side only
+---
 
-### Non-Functional Requirements
-- ✅ Clean, minimal interface
-- ✅ Easy to understand and use
-- ✅ No complex setup required
-- ✅ Fast load time
-- ✅ Responsive UI interactions
-- ✅ User-friendly aesthetic
-- ✅ Clear visual hierarchy
-- ✅ Readable typography
+## 📝 Technical Constraints
 
-## 🔧 Browser Compatibility
+### ✅ Requirements Met
 
-Aplikasi ini bekerja di browser modern:
-- ✅ Chrome (latest)
-- ✅ Firefox (latest)
-- ✅ Edge (latest)
-- ✅ Safari (latest)
+| Constraint | Status |
+|------------|--------|
+| HTML5 only | ✅ |
+| CSS3 only (no Tailwind) | ✅ |
+| Vanilla JS (no frameworks) | ✅ |
+| 1 CSS file only | ✅ |
+| 1 JS file only | ✅ |
+| Local Storage | ✅ |
+| No backend | ✅ |
+| Chart.js for visualization | ✅ |
+| Mobile responsive | ✅ |
+
+---
+
+## 🧪 Testing Checklist
+
+### Functionality Tests
+
+- [ ] Form validation bekerja
+- [ ] Transaksi bisa ditambah
+- [ ] Transaksi bisa dihapus
+- [ ] Sort berfungsi (4 opsi)
+- [ ] Chart update otomatis
+- [ ] Local Storage menyimpan data
+- [ ] Data persist setelah refresh
+- [ ] Dark mode toggle bekerja
+- [ ] Highlight spending bekerja
+- [ ] Alert muncul saat > limit
+
+### Responsive Tests
+
+- [ ] Desktop (1920px)
+- [ ] Laptop (1366px)
+- [ ] Tablet (768px)
+- [ ] Mobile (375px)
+- [ ] Mobile Small (320px)
+
+### Browser Tests
+
+- [ ] Chrome
+- [ ] Firefox
+- [ ] Safari
+- [ ] Edge
+
+---
+
+## 🤝 Contributing
+
+Ini adalah project assignment, tapi feedback dan suggestions welcome!
+
+1. Fork repository
+2. Create feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Open Pull Request
+
+---
 
 ## 📄 License
 
 MIT License - Feel free to use this project for learning purposes.
 
-## 👨‍💻 Developer
+```
+Copyright (c) 2026 [Your Name]
 
-Dibuat untuk memenuhi assignment Coding Camp - Expense & Budget Visualizer
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction...
+```
 
 ---
 
-**Note**: Aplikasi ini menggunakan SVG icons dari Feather Icons (MIT License) yang telah disesuaikan dengan color palette proyek.
+## 👨‍💻 Author
+
+**[Your Name]**
+- GitHub: [@yourusername](https://github.com/yourusername)
+- Email: your.email@example.com
+
+---
+
+## 🙏 Acknowledgments
+
+- **Chart.js** - Amazing charting library
+- **Feather Icons** - Beautiful SVG icons
+- **Coding Camp** - For the assignment and learning opportunity
+- **MDN Web Docs** - For excellent documentation
+
+---
+
+## 📚 Resources
+
+- [Chart.js Documentation](https://www.chartjs.org/docs/latest/)
+- [MDN Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+- [CSS Variables Guide](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+- [Feather Icons](https://feathericons.com/)
+
+---
+
+## 🐛 Known Issues
+
+Tidak ada known issues saat ini. Jika menemukan bug, silakan buat issue di GitHub.
+
+---
+
+## 🔮 Future Enhancements
+
+Ide untuk pengembangan selanjutnya:
+
+- [ ] Export data ke CSV/PDF
+- [ ] Multiple currency support
+- [ ] Budget planning feature
+- [ ] Monthly/yearly reports
+- [ ] Custom categories
+- [ ] Data backup/restore
+- [ ] PWA support
+- [ ] Multi-language support
+
+---
+
+## 📞 Support
+
+Jika ada pertanyaan atau butuh bantuan:
+
+1. Baca dokumentasi ini
+2. Check [DEPLOYMENT.md](DEPLOYMENT.md)
+3. Lihat [Issues](https://github.com/yourusername/repository/issues)
+4. Contact via email
+
+---
+
+**⭐ Jika project ini membantu, berikan star di GitHub!**
+
+---
+
+*Dibuat dengan ❤️ untuk Coding Camp Assignment*
