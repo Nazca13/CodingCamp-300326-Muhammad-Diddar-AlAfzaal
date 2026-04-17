@@ -196,6 +196,8 @@ expense-budget-visualizer/
 - Jumlah harus angka dan > 0
 - Kategori harus dipilih
 - Alert jika validasi gagal
+- Auto-format jumlah dengan titik pemisah ribuan (12000 → 12.000)
+- Hanya menerima input angka pada field jumlah
 ```
 
 ### 2. Transaction Management
@@ -208,12 +210,12 @@ expense-budget-visualizer/
 
 ### 3. Chart Visualization
 
-**Warna Chart (Soft Colors):**
+**Warna Chart (Vibrant Colors):**
 
 | Mode | Food | Transport | Fun |
 |------|------|-----------|-----|
-| Light | `#94a3b8` | `#a8a29e` | `#9ca3af` |
-| Dark | `#64748b` | `#78716c` | `#6b7280` |
+| Light | `#ef4444` (Red) | `#eab308` (Yellow) | `#22c55e` (Green) |
+| Dark | `#dc2626` (Dark Red) | `#ca8a04` (Dark Yellow) | `#16a34a` (Dark Green) |
 
 **Chart Features:**
 - Responsive sizing
@@ -221,6 +223,7 @@ expense-budget-visualizer/
 - Percentage display
 - Legend dengan color indicators
 - Smooth animations
+- Warna yang jelas dan mudah dibedakan
 
 ### 4. Theme System
 

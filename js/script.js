@@ -59,6 +59,46 @@ function setupEventListeners() {
     elements.form.addEventListener('submit', handleFormSubmit);
     elements.sortSelect.addEventListener('change', handleSort);
     elements.themeToggle.addEventListener('click', toggleTheme);
+    
+    // Auto-format amount input dengan titik pemisah ribuan
+    elements.amount.addEventListener('input', handleAmountInput);
+    elements.amount.addEventListener('keypress', handleAmountKeypress);
+}
+
+// ===== Handle Amount Input - Auto Format dengan Titik =====
+function handleAmountInput(e) {
+    let value = e.target.value;
+    
+    // Hapus semua karakter non-digit
+    value = value.replace(/\D/g, '');
+    
+    // Jika kosong, biarkan kosong
+    if (value === '') {
+        e.target.value = '';
+        return;
+    }
+    
+    // Convert ke number dan format dengan titik
+    const number = parseInt(value, 10);
+    e.target.value = formatNumber(number);
+}
+
+// ===== Handle Amount Keypress - Hanya Angka =====
+function handleAmountKeypress(e) {
+    // Allow: backspace, delete, tab, escape, enter
+    if ([8, 9, 27, 13].indexOf(e.keyCode) !== -1 ||
+        // Allow: Ctrl+A, Ctrl+C, Ctrl+V, Ctrl+X
+        (e.keyCode === 65 && e.ctrlKey === true) ||
+        (e.keyCode === 67 && e.ctrlKey === true) ||
+        (e.keyCode === 86 && e.ctrlKey === true) ||
+        (e.keyCode === 88 && e.ctrlKey === true)) {
+        return;
+    }
+    
+    // Hanya izinkan angka 0-9
+    if ((e.keyCode < 48 || e.keyCode > 57) && (e.keyCode < 96 || e.keyCode > 105)) {
+        e.preventDefault();
+    }
 }
 
 // ===== Form Submission =====
@@ -70,11 +110,14 @@ function handleFormSubmit(e) {
         return;
     }
 
+    // Hapus titik dari amount dan convert ke number
+    const amountValue = parseFloat(elements.amount.value.replace(/\./g, ''));
+
     // Create transaction object
     const transaction = {
         id: generateId(),
         name: elements.itemName.value.trim(),
-        amount: parseFloat(elements.amount.value),
+        amount: amountValue,
         category: elements.category.value,
         date: new Date().toISOString(),
         timestamp: Date.now()
@@ -102,7 +145,7 @@ function handleFormSubmit(e) {
 // ===== Form Validation =====
 function validateForm() {
     const name = elements.itemName.value.trim();
-    const amount = elements.amount.value;
+    const amountText = elements.amount.value.trim();
     const category = elements.category.value;
 
     if (!name) {
@@ -111,7 +154,10 @@ function validateForm() {
         return false;
     }
 
-    if (!amount || amount <= 0) {
+    // Hapus titik dari format dan convert ke number
+    const amount = parseFloat(amountText.replace(/\./g, ''));
+
+    if (!amountText || isNaN(amount) || amount <= 0) {
         alert('Jumlah harus lebih dari 0!');
         elements.amount.focus();
         return false;
