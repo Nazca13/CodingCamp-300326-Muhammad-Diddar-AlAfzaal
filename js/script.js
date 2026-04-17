@@ -255,21 +255,25 @@ function updateChart() {
     const categories = Object.keys(categoryTotals);
     const amounts = Object.values(categoryTotals);
 
+    const chartContainer = document.querySelector('.chart-container');
+
     // If no data, show empty state
     if (amounts.length === 0 || amounts.every(a => a === 0)) {
         if (chart) {
             chart.destroy();
             chart = null;
         }
-        elements.chartCanvas.parentElement.innerHTML = '<p class="empty-state">Belum ada data untuk ditampilkan</p>';
+        chartContainer.innerHTML = '<p class="empty-state">Belum ada data untuk ditampilkan</p>';
         return;
     }
 
     // Restore canvas if it was replaced
     if (!document.getElementById('expenseChart')) {
-        elements.chartCanvas.parentElement.innerHTML = '<canvas id="expenseChart"></canvas>';
-        elements.chartCanvas = document.getElementById('expenseChart');
+        chartContainer.innerHTML = '<canvas id="expenseChart"></canvas>';
     }
+    
+    // Always get fresh reference to canvas
+    const canvas = document.getElementById('expenseChart');
 
     const isDarkMode = document.body.classList.contains('dark-mode');
     const colors = categories.map(cat => isDarkMode ? categoryConfig[cat].colorDark : categoryConfig[cat].colorLight);
@@ -334,7 +338,7 @@ function updateChart() {
         chart.options = chartOptions;
         chart.update();
     } else {
-        chart = new Chart(elements.chartCanvas, {
+        chart = new Chart(canvas, {
             type: 'pie',
             data: chartData,
             options: chartOptions
