@@ -83,15 +83,15 @@ Aplikasi web untuk melacak pengeluaran harian dengan visualisasi yang bersih dan
 ## 🎨 Demo
 
 ### Live Demo
-🔗 [View Live Demo](https://your-username.github.io/CodingCamp-30Mar26-yourname/)
+🔗 [View Live Demo](https://nazca13.github.io/CodingCamp-300326-Muhammad-Diddar-AlAfzaal/)
 
 ### Quick Start
 ```bash
 # Clone repository
-git clone https://github.com/your-username/CodingCamp-30Mar26-yourname.git
+git clone https://github.com/Nazca13/CodingCamp-300326-Muhammad-Diddar-AlAfzaal.git
 
 # Buka folder
-cd CodingCamp-30Mar26-yourname
+cd CodingCamp-300326-Muhammad-Diddar-AlAfzaal
 
 # Buka index.html di browser
 open index.html  # macOS
@@ -210,13 +210,6 @@ expense-budget-visualizer/
 
 ### 3. Chart Visualization
 
-**Warna Chart (Vibrant Colors):**
-
-| Mode | Food | Transport | Fun |
-|------|------|-----------|-----|
-| Light | `#ef4444` (Red) | `#eab308` (Yellow) | `#22c55e` (Green) |
-| Dark | `#dc2626` (Dark Red) | `#ca8a04` (Dark Yellow) | `#16a34a` (Dark Green) |
-
 **Chart Features:**
 - Responsive sizing
 - Hover effects
@@ -224,6 +217,14 @@ expense-budget-visualizer/
 - Legend dengan color indicators
 - Smooth animations
 - Warna yang jelas dan mudah dibedakan
+
+**Warna Chart (Vibrant Colors):**
+
+| Kategori | Light Mode | Dark Mode |
+|----------|------------|-----------|
+| Food | `#10b981` (Green) | `#34d399` (Light Green) |
+| Transport | `#3b82f6` (Blue) | `#60a5fa` (Light Blue) |
+| Fun | `#ef4444` (Red) | `#f87171` (Light Red) |
 
 ### 4. Theme System
 
@@ -443,7 +444,7 @@ Ini adalah project assignment, tapi feedback dan suggestions welcome!
 MIT License - Feel free to use this project for learning purposes.
 
 ```
-Copyright (c) 2026 [Your Name]
+Copyright (c) 2026 Muhammad Diddar Al'Afzaal
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -454,9 +455,11 @@ in the Software without restriction...
 
 ## 👨‍💻 Author
 
-**[Your Name]**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
+**Muhammad Diddar Al'Afzaal**
+- GitHub: [@Nazca13](https://github.com/Nazca13)
+- Email: nazca13developer@gmail.com
+- Project Repository: [CodingCamp-300326-Muhammad-Diddar-AlAfzaal](https://github.com/Nazca13/CodingCamp-300326-Muhammad-Diddar-AlAfzaal)
+- Live Demo: [https://nazca13.github.io/CodingCamp-300326-Muhammad-Diddar-AlAfzaal/](https://nazca13.github.io/CodingCamp-300326-Muhammad-Diddar-AlAfzaal/)
 
 ---
 
@@ -505,8 +508,8 @@ Jika ada pertanyaan atau butuh bantuan:
 
 1. Baca dokumentasi ini
 2. Check [DEPLOYMENT.md](DEPLOYMENT.md)
-3. Lihat [Issues](https://github.com/yourusername/repository/issues)
-4. Contact via email
+3. Lihat [Issues](https://github.com/Nazca13/CodingCamp-300326-Muhammad-Diddar-AlAfzaal/issues)
+4. Contact via email: nazca13developer@gmail.com
 
 ---
 
