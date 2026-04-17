@@ -137,6 +137,9 @@ function handleFormSubmit(e) {
 
     // Reset form
     elements.form.reset();
+    elements.itemName.value = '';
+    elements.amount.value = '';
+    elements.category.value = '';
 
     // Show success feedback
     showNotification('Transaksi berhasil ditambahkan!');
