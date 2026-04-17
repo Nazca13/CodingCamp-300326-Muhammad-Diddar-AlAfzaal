@@ -9,22 +9,22 @@ const categoryConfig = {
         name: 'Food',
         iconLight: 'assets/icons/food-light.svg',
         iconDark: 'assets/icons/food-dark.svg',
-        colorLight: '#94a3b8',  // Soft blue-gray
-        colorDark: '#64748b'    // Darker blue-gray for dark mode
+        colorLight: '#10b981',  // Green
+        colorDark: '#34d399'    // Lighter green for dark mode
     },
     Transport: { 
         name: 'Transport',
         iconLight: 'assets/icons/transport-light.svg',
         iconDark: 'assets/icons/transport-dark.svg',
-        colorLight: '#a8a29e',  // Soft warm gray
-        colorDark: '#78716c'    // Darker warm gray for dark mode
+        colorLight: '#3b82f6',  // Blue
+        colorDark: '#60a5fa'    // Lighter blue for dark mode
     },
     Fun: { 
         name: 'Fun',
         iconLight: 'assets/icons/fun-light.svg',
         iconDark: 'assets/icons/fun-dark.svg',
-        colorLight: '#9ca3af',  // Soft cool gray
-        colorDark: '#6b7280'    // Darker cool gray for dark mode
+        colorLight: '#ef4444',  // Red
+        colorDark: '#f87171'    // Lighter red for dark mode
     }
 };
 
