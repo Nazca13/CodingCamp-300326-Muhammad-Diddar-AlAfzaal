@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense & Budget Visualizer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="assets/icons/wallet-light.svg" alt="Wallet" class="logo-icon light-icon">
+                    <img src="assets/icons/wallet-dark.svg" alt="Wallet" class="logo-icon dark-icon">
+                    <h1>Expense Tracker</h1>
+                </div>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <img src="assets/icons/moon-light.svg" alt="Dark Mode" class="theme-icon light-icon">
+                    <img src="assets/icons/sun-dark.svg" alt="Light Mode" class="theme-icon dark-icon">
+                </button>
+            </div>
+        </header>
+
+        <!-- Total Balance Section -->
+        <section class="balance-section">
+            <div class="balance-card">
+                <p class="balance-label">Total Pengeluaran</p>
+                <h2 class="balance-amount" id="totalBalance">Rp 0</h2>
+            </div>
+        </section>
+
+        <!-- Spending Limit Alert -->
+        <div id="limitAlert" class="limit-alert hidden">
+            <img src="assets/icons/alert-light.svg" alt="Alert" class="alert-icon light-icon">
+            <img src="assets/icons/alert-dark.svg" alt="Alert" class="alert-icon dark-icon">
+            <span>Pengeluaran Anda melebihi batas Rp <span id="limitAmount"></span>!</span>
+        </div>
+
+        <!-- Input Form -->
+        <section class="form-section">
+            <h3>Tambah Transaksi</h3>
+            <form id="transactionForm">
+                <div class="form-group">
+                    <label for="itemName">Nama Barang</label>
+                    <input 
+                        type="text" 
+                        id="itemName" 
+                        placeholder="Contoh: Makan siang"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="amount">Jumlah (Rp)</label>
+                    <input 
+                        type="number" 
+                        id="amount" 
+                        placeholder="0"
+                        min="1"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Kategori</label>
+                    <select id="category" required>
+                        <option value="">Pilih kategori</option>
+                        <option value="Food">Food</option>
+                        <option value="Transport">Transport</option>
+                        <option value="Fun">Fun</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Tambah Transaksi</button>
+            </form>
+        </section>
+
+        <!-- Sort Controls -->
+        <section class="controls-section">
+            <div class="sort-controls">
+                <label for="sortSelect">Urutkan:</label>
+                <select id="sortSelect">
+                    <option value="date-desc">Terbaru</option>
+                    <option value="date-asc">Terlama</option>
+                    <option value="amount-desc">Jumlah (Tertinggi)</option>
+                    <option value="amount-asc">Jumlah (Terendah)</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Transaction List -->
+        <section class="transactions-section">
+            <h3>Riwayat Transaksi</h3>
+            <div id="transactionList" class="transaction-list">
+                <p class="empty-state">Belum ada transaksi. Tambahkan transaksi pertama Anda!</p>
+            </div>
+        </section>
+
+        <!-- Chart Section -->
+        <section class="chart-section">
+            <h3>Distribusi Pengeluaran</h3>
+            <div class="chart-container">
+                <canvas id="expenseChart"></canvas>
+            </div>
+        </section>
+    </div>
+
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
