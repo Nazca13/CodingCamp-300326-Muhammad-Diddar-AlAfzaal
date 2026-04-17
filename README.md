@@ -132,12 +132,12 @@ start index.html # Windows
 
 1. **Clone atau Download Repository**
    ```bash
-   git clone https://github.com/your-username/repository-name.git
+   git clone https://github.com/Nazca13/CodingCamp-300326-Muhammad-Diddar-AlAfzaal.git
    ```
 
 2. **Buka Folder Proyek**
    ```bash
-   cd repository-name
+   cd CodingCamp-300326-Muhammad-Diddar-AlAfzaal
    ```
 
 3. **Buka di Browser**
@@ -332,22 +332,9 @@ Border: #3a3a3a
 
 3. **Access Website**
    ```
-   https://username.github.io/repository-name/
+   https://nazca13.github.io/CodingCamp-300326-Muhammad-Diddar-AlAfzaal/
    ```
-
-📖 **Panduan lengkap**: Lihat [DEPLOYMENT.md](DEPLOYMENT.md)
-
-### Alternative Hosting
-
-- **Netlify**: Drag & drop folder
-- **Vercel**: Import dari GitHub
-- **Surge**: `surge` command
-- **Firebase Hosting**: `firebase deploy`
-
----
-
-## 📸 Screenshots
-
+   
 ### Light Mode
 ```
 [Desktop View]
@@ -502,19 +489,6 @@ Ide untuk pengembangan selanjutnya:
 
 ---
 
-## 📞 Support
-
-Jika ada pertanyaan atau butuh bantuan:
-
-1. Baca dokumentasi ini
-2. Check [DEPLOYMENT.md](DEPLOYMENT.md)
-3. Lihat [Issues](https://github.com/Nazca13/CodingCamp-300326-Muhammad-Diddar-AlAfzaal/issues)
-4. Contact via email: nazca13developer@gmail.com
-
----
-
 **⭐ Jika project ini membantu, berikan star di GitHub!**
 
 ---
-
-*Dibuat dengan ❤️ untuk Coding Camp Assignment*
